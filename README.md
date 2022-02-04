@@ -1,5 +1,5 @@
 # Challenge 10: Unsupervised Machine Learning
-UNCC Online FinTech Bootcamp Module 8-9 Project due by 11:59pm 2/13/2022
+UNCC Online FinTech Bootcamp Module 10 Challenge due by 11:59pm 2/13/2022
 
 ![](Images/crypto_photo.png)
 
