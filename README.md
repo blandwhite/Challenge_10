@@ -35,6 +35,8 @@ Python libraries used:
  - [Pathlib](https://docs.python.org/3.7/library/pathlib.html) - *a library that enables consistent input and output of files from the main app.*
  - [hvPlot](https://hvplot.holoviz.org/user_guide/Introduction.html) - *a high-level plotting API for the PyData ecosystem built on HoloViews.*
  - [scikit-learn](https://scikit-learn.org/stable/user_guide.html) - *an open source machine learning library that supports supervised and unsupervised learning.*
+ - [plotly](https://plotly.com/python/) - *an interactive, open-source, and browser-based graphing library for Python.*
+ - [seaborn](https://seaborn.pydata.org/installing.html) - *a visualization library based on matplotlib. It provides a high-level interface for drawing attractive and informative statistical graphics.*
 
 
 ### Installation Guide
@@ -44,13 +46,24 @@ prior to running these libraries, install them from the command line:
   - pathlib: `pip install pathlib`
   - hvPlot: `conda install -c pyviz hvplot` or `pip install hvplot`
   - sklearn: `pip install-U scikit-learn` - included in conda
+  - plotly: `pip install plotly==5.5.0`
+  - seaborn: `pip install seaborn` or `conda install seaborn`
   
-
 ---
 
 ## Usage
 
 After visually analyzing the cluster analysis results, what is the impact of using fewer features to cluster the data by using K-means?
+
+![](Images/compare_cluster_analysis.png)
+
+By using PCA and using fewer features to cluster the data, it is easier to visualize the clusters (including the two that are single-member outliers). The members of each cluster don't appear to have changed, but they are more tigthly clustered. The outlier celsius-degree-token is visually easier to see as dissimilar using PCA; prior to PCA it was visually within the sphere of a different cluster, but not part of it.
+
+We can also take a deeper dive into the PCA results by plotting all three PCA features using plotly express. This is a quick way to compare each of the 3 components against eachother by turning the plot around so that all combinations of the components can be viewed (i.e. PCA1 vs PCA2; PCA1 vs PCA3; and PCA2 vs PCA3).
+
+![](Images/3d_plot_demo.gif)
+
+Now that we have developed a way to group crypto assets, we can use that information to diversify our portfolios, by including investments from each of the main clusters.
 
 ---
  
